@@ -65,9 +65,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-<h2>Steps:</h2>
-- Installing Redis: composer require predis/predis
-- Edit 'config/database.php':
+<h2>Steps</h2>
+<ul>
+<li>Installing Redis: composer require predis/predis</li>
+<li>Edit 'config/database.php':<br/>
     'redis' => [
 
     'client' => env('REDIS_CLIENT', 'predis'),
@@ -86,7 +87,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     ],
 
     ],
+</li>
+<li>Add "REDIS_CLIENT=predis" to .env file</li>
 
-- Add "REDIS_CLIENT=predis" to .env file
+</ul>
 
 
