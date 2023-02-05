@@ -91,6 +91,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 </li>
 <li>Add "REDIS_CLIENT=predis" to .env file</li>
 <li>Seeding</li>
+<li>Fetching</li>
+<li>Updating</li>
 </ul>
 
 
