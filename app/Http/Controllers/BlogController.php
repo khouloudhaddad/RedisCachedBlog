@@ -89,9 +89,26 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blog $blog)
-    {
-        //
+    public function update(Request $request, $id) {
+
+        $update = Blog::findOrFail($id)->update($request->all());
+
+        if($update) {
+
+            // Delete blog_$id from Redis
+            Redis::del('blog_' . $id);
+
+            $blog = Blog::find($id);
+            // Set a new key with the blog id
+            Redis::set('blog_' . $id, $blog);
+
+            return response()->json([
+                'status_code' => 201,
+                'message' => 'User updated',
+                'data' => $blog,
+            ]);
+        }
+
     }
 
     /**

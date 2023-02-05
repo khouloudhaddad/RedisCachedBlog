@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/blogs/{id}', [BlogController::class, 'index']);
+Route::post('/blogs/update/{id}', [BlogController::class, 'update']);
+
