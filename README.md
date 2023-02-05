@@ -94,6 +94,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <li>Fetching</li>
 <li>Updating</li>
 <li>Delete</li>
+<li>Laravel Dusk7.5: composer require --dev laravel/dusk / php artisan dusk:install</li>
 </ul>
 
 
